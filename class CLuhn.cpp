@@ -12,6 +12,7 @@ public:
 	string typeCard();	
 
 protected:
+	
 	// This method can be used in a class hierarchy, so I left it protected.
 	
 	bool luhnCheck();
