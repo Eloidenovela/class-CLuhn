@@ -4,9 +4,8 @@
 
 using namespace std;
 
-class CLuhn{
+class CLuhn {
 public:
-	
 	CLuhn();
 	~CLuhn();
 	void setCardNumber(long long int card_number){ this->card_number = card_number; }
@@ -23,7 +22,7 @@ private:
 	
 };
 
-CLuhn::CLuhn(){
+CLuhn::CLuhn() {
 	
 	this->card_number = 0;
 	this->digits_quantity = 0;
@@ -32,16 +31,14 @@ CLuhn::CLuhn(){
 
 CLuhn::~CLuhn(){}
 
-string CLuhn::typeCard(){
+string CLuhn::typeCard() {
 	
 	short int counter = 0; 
 	long long int start_digits = 0, card_number = this->card_number;
 	
-	
 	if(luhnCheck()){
 		
 		while(counter < (digits_quantity - 2)){
-		
 		
 			start_digits = card_number / 10;
 			card_number = start_digits;
@@ -85,7 +82,7 @@ bool CLuhn::luhnCheck(){
 		
 		if(counter % 2 != 0){
 			
-			left_digits+= card_number % 10;
+			left_digits += card_number % 10;
 			
 		}else{
 		
@@ -94,7 +91,7 @@ bool CLuhn::luhnCheck(){
 			
 			while(right_numbers != 0){
 				
-				right_digits+= right_numbers % 10;
+				right_digits += right_numbers % 10;
 				
 				right_numbers = right_numbers / 10;
 			}
