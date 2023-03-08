@@ -66,7 +66,7 @@ string CLuhn::typeCard() {
 
 }
 
-bool CLuhn::luhnCheck(){
+bool CLuhn::luhnCheck() {
 	
 	// This is Luhn's check-> if the check is successful, the method returns true.
 	
@@ -113,7 +113,7 @@ bool CLuhn::luhnCheck(){
 	
 }
 
-int main(){
+int main() {
 	
 	long long int card_number;
 	CLuhn object;
